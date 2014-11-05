@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets>
+    <easylightbox_image type="easylightbox/image">
+        <name>EasyLightbox image</name>
+        <description type="desc">Add image to store with EasyLightbox</description>
+        <js>tm/easylightbox/ajaxUpload.js</js>
+        <parameters>
+            <imageupload>
+				<label>Image</label>
+                <type>easylightbox/adminhtml_widget_image</type>
+				<required>1</required>
+				<visible>1</visible>
+				<value></value>
+				<description>Select image file</description>
+            </imageupload>
+            <imagepath>
+                <type>text</type>
+				<required>1</required>
+				<visible>0</visible>
+				<value></value>
+            </imagepath>
+            <imagetitle>
+                <label>Image title</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagetitle>
+            <imagegroup>
+                <label>Image group</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagegroup>
+            <imagepagewidth>
+                <label>Image Page Width</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagepagewidth>
+            <imagepageheight>
+                <label>Image Page Height</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagepageheight>
+            <imagelightboxwidth>
+                <label>Image Lightbox Width</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagelightboxwidth>
+            <imagelightboxheight>
+                <label>Image Lightbox Height</label>
+                <type>text</type>
+                <visible>1</visible>
+                <required>0</required>
+            </imagelightboxheight>
+            <template translate="label">
+                <label>Frontend Template</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <values>
+                    <icons translate="label">
+                        <value>easylightbox/images.phtml</value>
+                        <label>Image</label>
+                    </icons>
+                    <text translate="label">
+                        <value>easylightbox/link.phtml</value>
+                        <label>Text Links</label>
+                    </text>
+                </values>
+            </template>
+        </parameters>
+    </easylightbox_image>
+</widgets>

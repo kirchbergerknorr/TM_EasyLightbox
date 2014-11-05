@@ -2,7 +2,7 @@
 <config>
     <modules>
         <TM_EasyLightbox>
-            <version>1.0.0</version>
+            <version>2.0.0</version>
         </TM_EasyLightbox>
     </modules>
     <global>
@@ -11,6 +11,17 @@
                 <class>TM_EasyLightbox_Helper</class>
             </easylightbox>
         </helpers>
+        <models>
+            <easylightbox>
+                <class>TM_EasyLightbox_Model</class>
+                <resourceModel>easylightbox_mysql4</resourceModel>
+            </easylightbox>
+        </models>
+        <blocks>
+            <easylightbox>
+                <class>TM_EasyLightbox_Block</class>
+            </easylightbox>
+        </blocks>
         <resources>
             <easylightbox_setup>
                 <setup>
@@ -58,27 +69,46 @@
                 </easylightbox>
             </updates>
         </layout>
+        <translate>
+            <modules>
+                <TM_EasyLightbox>
+                    <files>
+                        <default>TM_EasyLightbox.csv</default>
+                    </files>
+                </TM_EasyLightbox>
+            </modules>
+        </translate>
     </frontend>
+
     <adminhtml>
-        <acl>
-            <resources>
-                <admin>
-                    <children>
-                        <system>
-                            <children>
-                                <config>
-                                    <children>
-                                        <easy_lightbox translate="title" module="easylightbox">
-                                            <title>Easy Lightbox Section</title>
-                                            <sort_order>55</sort_order>
-                                        </easy_lightbox>
-                                    </children>
-                                </config>
-                            </children>
-                        </system>
-                    </children>
-                </admin>
-            </resources>
-        </acl>
+        <translate>
+            <modules>
+                <TM_EasyLightbox>
+                    <files>
+                        <default>TM_EasyLightbox.csv</default>
+                    </files>
+                </TM_EasyLightbox>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <easylightbox>
+                    <file>easylightbox.xml</file>
+                </easylightbox>
+            </updates>
+        </layout>
     </adminhtml>
+
+    <admin>
+        <routers>
+            <easylightbox>
+                <use>admin</use>
+                <args>
+                    <module>TM_EasyLightbox</module>
+                    <frontName>easylightbox</frontName>
+                </args>
+            </easylightbox>
+        </routers>
+    </admin>
+
 </config>

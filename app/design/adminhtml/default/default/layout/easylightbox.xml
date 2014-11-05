@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout>
+   <adminhtml_cms_page_edit>
+       <reference name="head">
+            <action method="addJs" ifconfig="easy_lightbox/general/enabled">
+                <name>tm/easylightbox/ajaxUpload.js</name>
+            </action>
+        </reference>
+   </adminhtml_cms_page_edit>
+   <adminhtml_cms_block_edit>
+       <reference name="head">
+            <action method="addJs" ifconfig="easy_lightbox/general/enabled">
+                <name>tm/easylightbox/ajaxUpload.js</name>
+            </action>
+        </reference>
+   </adminhtml_cms_block_edit>
+</layout>

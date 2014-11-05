@@ -1,0 +1,27 @@
+<?php $_lightboxConfig = Mage::getStoreConfig('easy_lightbox/general'); ?>
+<script type="text/javascript">
+
+    function initLightbox(){
+        new Lightbox({
+            fileLoadingImage: '<?php echo $this->getSkinUrl('images/lightbox/loading.gif') ?>',
+            fileBottomNavCloseImage: '<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif') ?>',
+            overlayOpacity: <?php echo $_lightboxConfig['overlayOpacity'] ?>,
+            animate: <?php echo (($_lightboxConfig['animate'] > 0)? "1":"0"); ?>,
+            resizeSpeed: <?php echo $_lightboxConfig['resizeSpeed'] ?>,
+            borderSize: <?php echo $_lightboxConfig['borderSize'] ?>,
+            labelImage: '<?php echo $_lightboxConfig['labelImage'] ?>',
+            labelOf: '<?php echo $_lightboxConfig['labelOf'] ?>'
+        });
+    }
+
+
+    if (Prototype.Browser.IE) {
+        Event.observe(window, 'load', function(){ //KB927917 fix
+            initLightbox();
+        });
+    } else {
+        document.observe("dom:loaded", function(){
+            initLightbox();
+        });
+    }
+</script>
