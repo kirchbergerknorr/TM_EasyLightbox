@@ -5,10 +5,10 @@ class TM_EasyLightbox_Adminhtml_IndexController extends Mage_Adminhtml_Controlle
     public function saveAction()
     {
         $path = Mage::getBaseDir('media') . '/easylightbox/';
-        if ($this->getRequest()->isPost()){
-            try{
+        if ($this->getRequest()->isPost()) {
+            try {
                 $uploader = new Varien_File_Uploader('image');
-                $uploader->setAllowedExtensions(array('jpg','jpeg','gif','png'));
+                $uploader->setAllowedExtensions(array('jpg', 'jpeg', 'gif', 'png'));
                 $uploader->setAllowRenameFiles(true);
                 $result = $uploader->save($path);
             } catch (Exception $e) {
@@ -19,7 +19,7 @@ class TM_EasyLightbox_Adminhtml_IndexController extends Mage_Adminhtml_Controlle
                 return;
             }
             $this->getResponse()->setBody(Mage::helper('core')->jsonEncode(array(
-                'success'   => true,
+                'success' => true,
                 'imagepath' => $result['file']
             )));
         }

@@ -43,21 +43,21 @@
             </easylightbox_read>
         </resources>
     </global>
-	<default>
+    <default>
         <easy_lightbox>
             <general>
-				<enabled>0</enabled>
+                <enabled>0</enabled>
                 <defaulzoom>0</defaulzoom>
-				<mainImageSize>265_265</mainImageSize>
-				<popupImageSize>500_500</popupImageSize>
-				<additionalImageSize>60_60</additionalImageSize>
+                <mainImageSize>265_265</mainImageSize>
+                <popupImageSize>500_500</popupImageSize>
+                <additionalImageSize>60_60</additionalImageSize>
                 <productName>0</productName>
-				<animate>1</animate>
-				<overlayOpacity>0.8</overlayOpacity>
-				<resizeSpeed>7</resizeSpeed>
-				<borderSize>10</borderSize>
-				<labelImage>Image</labelImage>
-				<labelOf>of</labelOf>
+                <animate>1</animate>
+                <overlayOpacity>0.8</overlayOpacity>
+                <resizeSpeed>7</resizeSpeed>
+                <borderSize>10</borderSize>
+                <labelImage>Image</labelImage>
+                <labelOf>of</labelOf>
             </general>
         </easy_lightbox>
     </default>

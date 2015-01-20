@@ -6,18 +6,18 @@
         <js>tm/easylightbox/ajaxUpload.js</js>
         <parameters>
             <imageupload>
-				<label>Image</label>
+                <label>Image</label>
                 <type>easylightbox/adminhtml_widget_image</type>
-				<required>1</required>
-				<visible>1</visible>
-				<value></value>
-				<description>Select image file</description>
+                <required>1</required>
+                <visible>1</visible>
+                <value></value>
+                <description>Select image file</description>
             </imageupload>
             <imagepath>
                 <type>text</type>
-				<required>1</required>
-				<visible>0</visible>
-				<value></value>
+                <required>1</required>
+                <visible>0</visible>
+                <value></value>
             </imagepath>
             <imagetitle>
                 <label>Image title</label>

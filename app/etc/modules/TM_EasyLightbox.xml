@@ -5,9 +5,9 @@
             <active>true</active>
             <codePool>community</codePool>
             <depends>
-                <Mage_Catalog />
-                <Mage_Cms />
+                <Mage_Catalog/>
+                <Mage_Cms/>
             </depends>
         </TM_EasyLightbox>
-</modules>
+    </modules>
 </config>

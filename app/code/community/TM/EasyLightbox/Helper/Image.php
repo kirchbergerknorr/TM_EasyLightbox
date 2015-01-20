@@ -1,4 +1,5 @@
 <?php
+
 class TM_EasyLightbox_Helper_Image extends Mage_Catalog_Helper_Image
 {
     public function init($image)

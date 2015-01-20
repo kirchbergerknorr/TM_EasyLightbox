@@ -1,14 +1,15 @@
 <?php
+
 class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
 {
     protected $_width;
     protected $_height;
 
-    protected $_keepAspectRatio  = true;
-    protected $_keepFrame        = true;
+    protected $_keepAspectRatio = true;
+    protected $_keepFrame = true;
     protected $_keepTransparency = true;
-    protected $_constrainOnly    = false;
-    protected $_backgroundColor  = array(255, 255, 255);
+    protected $_constrainOnly = false;
+    protected $_backgroundColor = array(255, 255, 255);
 
     protected $_baseFile;
     protected $_newFile;
@@ -76,7 +77,7 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
         // determine width and height from string
         list($width, $height) = explode('x', strtolower($size), 2);
         foreach (array('width', 'height') as $wh) {
-            $$wh  = (int)$$wh;
+            $$wh = (int)$$wh;
             if (empty($$wh))
                 $$wh = null;
         }
@@ -99,7 +100,7 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
     {
         $memoryLimit = ini_get('memory_limit');
 
-        if (!isSet($memoryLimit[0])){
+        if (!isSet($memoryLimit[0])) {
             $memoryLimit = "128M";
         }
 
@@ -150,8 +151,7 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
         foreach ($rgbArray as $value) {
             if (null === $value) {
                 $result[] = 'null';
-            }
-            else {
+            } else {
                 $result[] = sprintf('%02s', dechex($value));
             }
         }
@@ -188,21 +188,21 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
             $baseDir,
             'cache'
         );
-        if((!empty($this->_width)) || (!empty($this->_height))) {
+        if ((!empty($this->_width)) || (!empty($this->_height))) {
             $path[] = "{$this->_width}x{$this->_height}";
         }
         $path[] = md5(
             implode('_', array(
-                ($this->_keepAspectRatio  ? '' : 'non') . 'proportional',
-                ($this->_keepFrame        ? '' : 'no')  . 'frame',
-                ($this->_keepTransparency ? '' : 'no')  . 'transparency',
-                ($this->_constrainOnly ? 'do' : 'not')  . 'constrainonly',
+                ($this->_keepAspectRatio ? '' : 'non') . 'proportional',
+                ($this->_keepFrame ? '' : 'no') . 'frame',
+                ($this->_keepTransparency ? '' : 'no') . 'transparency',
+                ($this->_constrainOnly ? 'do' : 'not') . 'constrainonly',
                 $this->_rgbToString($this->_backgroundColor),
                 'angle' . $this->_angle
             ))
         );
         $this->_newFile = implode('/', $path) . $file;
-        
+
         return $this;
     }
 
@@ -224,7 +224,7 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
 
     public function getImageProcessor()
     {
-        if( !$this->_processor ) {
+        if (!$this->_processor) {
 //            var_dump($this->_checkMemory());
 //            if (!$this->_checkMemory()) {
 //                $this->_baseFile = null;
@@ -284,7 +284,7 @@ class TM_EasyLightbox_Model_Image extends Mage_Core_Model_Abstract
 
     public function clearCache()
     {
-        $directory = Mage::getBaseDir('media') . DS.'easylightbox'.DS.'cache'.DS;
+        $directory = Mage::getBaseDir('media') . DS . 'easylightbox' . DS . 'cache' . DS;
         $io = new Varien_Io_File();
         $io->rmdir($directory, true);
     }

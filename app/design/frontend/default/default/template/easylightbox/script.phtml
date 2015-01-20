@@ -1,7 +1,7 @@
 <?php $_lightboxConfig = Mage::getStoreConfig('easy_lightbox/general'); ?>
 <script type="text/javascript">
 
-    function initLightbox(){
+    function initLightbox() {
         new Lightbox({
             fileLoadingImage: '<?php echo $this->getSkinUrl('images/lightbox/loading.gif') ?>',
             fileBottomNavCloseImage: '<?php echo $this->getSkinUrl('images/lightbox/closelabel.gif') ?>',
@@ -16,11 +16,11 @@
 
 
     if (Prototype.Browser.IE) {
-        Event.observe(window, 'load', function(){ //KB927917 fix
+        Event.observe(window, 'load', function () { //KB927917 fix
             initLightbox();
         });
     } else {
-        document.observe("dom:loaded", function(){
+        document.observe("dom:loaded", function () {
             initLightbox();
         });
     }

@@ -1,6 +1,6 @@
 <?php
 
-class TM_EasyLightbox_Block_Adminhtml_Widget_Image 
+class TM_EasyLightbox_Block_Adminhtml_Widget_Image
     extends Mage_Adminhtml_Block_Template implements Varien_Data_Form_Element_Renderer_Interface
 {
 
