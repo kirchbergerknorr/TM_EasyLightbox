@@ -1,5 +1,5 @@
 {
-    "name": "TM/EasyLightbox",
+    "name": "kirchbergerknorr/TM_EasyLightbox",
     "description": "Adds the jQuery-Lightbox to product galleries",
     "type": "magento-module"
 }
