@@ -1,5 +1,11 @@
 {
-    "name": "TM/EasyLightbox",
+    "name": "kirchbergerknorr/TM_EasyLightbox",
     "description": "Adds the jQuery-Lightbox to product galleries",
-    "type": "magento-module"
+    "type": "magento-module",
+    "authors": [
+        {"name": "Template Monster"}
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
 }
